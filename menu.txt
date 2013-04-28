@@ -1,0 +1,139 @@
+#Chocolat|1.00
+5849632873|Barre Mars
+6120022595|Crunchie
+6120000349|Wunderbar
+5849681459|Snickers
+6120022594|Caramilk
+5849681304|Bounty
+5980000021|Coffee Crisp
+5849635277|Twix
+6202000068|Bueno
+5849681232|M&M's
+5980052311|Aero Menthe
+598753|Mirage
+566373|Reese
+598033|Schiettekatte
+681130|Hershey's
+613452|Mr. Big
+7022100516|Toblerone|0.75
+620294|Ferrero Rocher|1.25
+
+#Petite friandise|0.75
+7545447022|Nougat
+7339000011|Menthos
+1676100568|Jelly beans (petit)
+1676100589|Tranches de fruit (petit)
+7259000015|Sesame Snaps|0.25
+6753513502|Suçon (3 pour 0.25)|0.25
+
+#Grande friandise|1.50
+1676100505|Jelly beans (grand)
+1676100531|Tranches de fruit (grand)
+1676100507|Macarons chocolat
+1676100087|Amandes chocolat lait
+1676100477|Grenouilles jujube
+1676100478|Gummy bears
+1676100485|Anneaux pêche
+1676100483|Melons jujube
+1676100525|Yummies chocolat
+1676100020|Raisins yogourt
+1676100480|Berries
+1676100003|Peanuts BBQ
+1676100036|Canneberges chocolat
+
+#Grosse friandise|1.75
+1676100035|Grain cafe chocolat
+
+#Chips|0.75
+6041007195|Doritos Nachos
+6041000157|Lay's BBQ
+6041000177|Miss Vickie's
+6041000163|Lay's sel & vin.
+
+#Gomme|0.75
+649313|Excel MV
+649443|Excel MP
+649323|Excel M
+649343|Excel MG
+5770061772|Trident Baiedelice
+5770061896|Trident Splash FK
+5770061849|Trident Splash VM
+5770032971|Dentine Ice Frissons
+5770032944|Dentine Ice Intense
+5770032937|Dentine Ice Menthe
+5770032943|Dentine Ice MV
+5770033148|Dentine Fire
+5770062860|Halls|1.00
+
+#Brevage chaud|0.50
+6500068954|Chocolat chaud saveur
+6500036492|Chocolat chaud|0.50|cc
+1234500025|Petit café|0.50|cp
+1234500026|Grand café|0.75|cg
+1234500027|Petit thé|0.50|tp
+1234500028|Grand thé|0.75|tg
+1234500034|10e café gratuit|0.00|gr
+
+#Canettes|0.75
+6321101292|V8
+6900007113|Brisk punch
+6900001661|Lipton thé vert
+6900007000|Brisk limonade
+6900004050|Mug root beer
+6900040042|Pepsi lime
+6900002425|Moutain Dew
+6900001510|Brisk thé glacé
+6900001425|Pepsi diète
+566030|Crush rose
+166873|Ginger ale
+654143|7up
+654153|7up diète
+694250|Pepsi
+566010|Crush orange
+549293|Dr. Pepper
+1809400101|Energy drink|2.50
+
+#Jus|1.00
+6900001811|Jus canneberge
+6540001125|Jus ananas-mangue
+6540001126|Jus pamplemousse
+6540001099|Jus pomme
+6540001098|Jus orange
+6540001100|Jus fraise-kiwi
+6540001102|Jus fraise pétillant
+5557742094|Gatorade mauve
+5557742093|Gatorade rouge
+5557742092|Gatorade orange
+7478000070|Perrier
+
+#Repas|0.00
+1234500001|Sandwich régulier|3.25|sw
+1234500002|Sandwich deluxe|4.00|swl
+1234500029|Soupe (1 louche)|0.50|sp
+1234500030|Pizza (1 pointe)|2.00|pz
+1234500032|Livreur pizza|-30.00|liv
+1234500024|Bagel Saumon|3.00|bgs
+1234500005|Légumes et hummus|2.00|lg
+1234500007|Fruits frais|2.00|ff
+1234500006|Fromage et raisins|2.00|fr
+1234500023|Bagel fromage|1.00|bgf
+1234500022|Bagel seul|0.75|bg
+1234500004|Grande salade|4.00|sag
+1234500003|Petite salade|2.00|sap
+1234500009|Quiche|2.50|qu
+1234500008|Pâté saumon|2.75|ps
+1234500031|Chili (1 louche)|1.00|ch
+
+#Viennoiseries|1.50
+1234500018|Reine Élizabeth|1.50|re
+1234500017|Gâteau carottes|1.50|gc
+1234500020|Carré aux amandes|1.50|ca
+1234500021|Carré aux dattes|1.25|cd
+1234500014|Brioche|1.50|br
+1234500011|Croissant|1.50|cr
+1234500015|Biscuit|1.25|bi
+1234500016|Brownie|1.50|bw
+1234500012|Chocolatine|1.50|cho
+1234500010|Muffin|1.25|mu
+1234500019|Palmier|1.50|pa
+1234500013|Scone|1.50|sc
