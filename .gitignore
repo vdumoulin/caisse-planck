@@ -1,3 +1,4 @@
-.class
+*.class
 totalcaisse.dat
 transactions/
+.DS_STORE
