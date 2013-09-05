@@ -1,0 +1,73 @@
+DrawerController:
+Une librairie JAVA pour controler l'ouverture d'un tiroir caisse MS-Cash Drawer sous Linux.
+
+LIMITATIONS:
+Pour l'instant, ne supporte que l'existance d'un seul tiroir (pour 2 raison: Stoquage des objets
+de communication de façon statique et globale, et incapacité, lors de la connexion USB, de
+différencier 2 tiroirs). De plus, ce tiroir doit OBLIGATOIREMENT être à l'adresse 0. (Ca se choisit
+sur les petits DIP-Switches sous le tiroir.)
+
+LICENCE:
+© Vincent Aymong, 2011.
+Ce code est liscencé sour les termes du GPL v2, étant dérivé de SWIG et de libhid, tous deux GPL.
+
+Prérequis:
+   libusb: Disponible dans le package manager de Ubuntu.
+   libhid: disponible à "http://libhid.alioth.debian.org/". Suivre les instructions sur la page.
+   java: (pour compiler et/ou utiliser la librairie java: l'application standalone ne le nécessite
+         pas) Disponible dans le package manager de Ubuntu.
+   swig: (Pour compiler la librairie java) Disponible sur le package manager de Ubuntu.
+   gcc: (pour compiler la librairie java et/ou l'application standalone) Diponible dans le package
+        manager de Ubuntu.
+  
+   Après l'installation, exécuter 'sudo ldconfig' une fois.
+
+   Par défaut, Ubuntu donne les droits d'accès à des périphériques incoconnu à root seulement. Copier
+   drawer.rules dans /etc/udev/rules.d, pour que l'OS reconnaise le tiroir et donner les droits d'accès
+   à tous les usagers.
+
+Instructions de compilation:
+  Exécuter 'make'. Variantes possibles:
+     make all: Compile tout.
+     make lib: Juste les librairies.
+     make bin: juste le programme standalone.
+     make cleanup: Nettoie les fichiers temporaires de compilation.
+
+Contenu des dossiers (après la compilation):
+   bin:
+      drawerController: Application Standalone. 
+
+   lib:
+      drawerControllib.jar: Package java exposant 4 méthodes pour contrôler le tiroir.
+      libdrawerControl.so: Librarie binaire nécessaire pour le package java. Recommandé de copier dans
+                           /usr/local/lib, mais ce n'est pas nécessaire.
+
+   src:
+      Code source du programme et intermédiaires de compilation, si 'make cleanup' n'a pas été exécuté.
+
+Utilisation:
+   Programme standalone:
+      Prends 2 arguments, "open", ou "status", pour respectivement ouvrir, ou obtenir l'état du tiroir.
+
+   Librairie java:
+      drawerControllib.jar doit être intégrée au classpath du projet.
+      Ce package contiens une classe exposant 4 méthodes:
+         void openCommunication(): Initialise la connexion avec le tiroir.
+         void openDrawer(): Envoie une commande pour ouvrir le tiroir.
+         Status getStatus(): Retourne l'état d'ouverture du tiroir. L'état est encodé par un membre de
+                             l'énumération Status, aussi incluse dans le .jar. Les 3 états possibles
+                             sont OPEN, CLOSED ou UNKNOWN. (Mais UNKNOWN sera toujours accompagné d'une
+                             exception lancée.)
+         void closeCommunication(): Ferme la connexion avec le tiroir.
+
+         Toutes ces méthodes lancent une exception Exception() en cas d'erreur de communication. Chaque
+         exception est accompagnée d'un texte justificatif détaillant un peu l'erreur.
+
+        Avant d'invoquer quelconque méthode de ce package, il faut obligatoirement exécuter (une et une
+        seule fois) la commande suivante dans le programme java: System.load("/usr/local/lib/libdrawerControl.so");.
+        Cela loade la librarie .so en mémoire, et permet d'utiliser les méthodes de la classe, puisque
+        c'est la librairie (écrite en C) qui contient leur implémentation.
+
+
+
+
