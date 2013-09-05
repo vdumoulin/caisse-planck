@@ -6,9 +6,6 @@ import java.io.*;
 import javax.swing.*;
 
 public class FileEditDialog extends JDialog{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	public static final boolean MENU = true;
 	public static final boolean EMPLOYES = false;
@@ -32,7 +29,10 @@ public class FileEditDialog extends JDialog{
 			text.read(new FileReader(fileName), null);
 		} 
 		catch(FileNotFoundException fne) {
-			JOptionPane.showMessageDialog(null, "Erreur: le fichier "+fileName+" est introuvable");
+			JOptionPane.showMessageDialog(
+                null,
+                "Erreur: le fichier "+fileName+" est introuvable"
+            );
 		}
 		catch(IOException ioe) {
 			ioe.printStackTrace();
@@ -60,7 +60,10 @@ public class FileEditDialog extends JDialog{
 					output.close();
 				} 
 				catch(FileNotFoundException fne) {
-					JOptionPane.showMessageDialog(null, "Erreur: fichier non trouvé");
+					JOptionPane.showMessageDialog(
+                        null,
+                        "Erreur: fichier non trouvé"
+                    );
 				}
 				setVisible(false);
 			}
@@ -71,6 +74,5 @@ public class FileEditDialog extends JDialog{
 				setVisible(false);
 			}
 		});
-		
 	}
 }

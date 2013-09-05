@@ -3,10 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class GestionButton extends JButton {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	public GestionButton (String text, ActionListener listener) {

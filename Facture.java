@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 public class Facture extends JPanel {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private ArrayList<ItemButton> itemButtonsAL;
 	private double total;
@@ -37,7 +34,10 @@ public class Facture extends JPanel {
 	public String toString() {
 		StringBuffer laNote = new StringBuffer();
 		for(ItemButton item : itemButtonsAL) {
-			laNote.append(item.getName()+" x "+item.getQuantity()+" = "+df.format(item.getSubtotal())+"\n");
+			laNote.append(
+                item.getName() + " x " + item.getQuantity() + " = " +
+                df.format(item.getSubtotal()) + "\n"
+            );
 		}
 		laNote.append("Total = "+df.format(total));
 		return laNote.toString();
@@ -68,7 +68,10 @@ public class Facture extends JPanel {
 		ArrayList<String> itemsLog = new ArrayList<String>();
 		for(ItemButton item : itemButtonsAL) {
 			for(int i=0; i<item.getQuantity(); i++)
-				itemsLog.add(item.getCategory()+"|"+item.getBarcode()+"|"+item.getName()+"|"+df.format(item.getPrice()));
+				itemsLog.add(
+                    item.getCategory() + "|" + item.getBarcode() + "|" +
+                    item.getName() + "|" + df.format(item.getPrice())
+                );
 		}
 		return itemsLog;
 	}

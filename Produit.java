@@ -1,7 +1,4 @@
-
-
 public class Produit {
-	
 	private String barcode;
 	private String name;
 	private double price;
@@ -9,7 +6,8 @@ public class Produit {
 	private int quantity;
 	private double subtotal;
 	
-	public Produit(String barcode, String name, double price, String category) {
+	public Produit(String barcode, String name, double price,
+                   String category) {
 		this.barcode=barcode;
 		this.name=name;
 		this.price=price;

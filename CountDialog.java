@@ -1,24 +1,37 @@
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class CountDialog extends JDialog {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	private JNumberTextField nb20 = new JNumberTextField(3,JNumberTextField.NUMERIC);
-	private JNumberTextField nb10 = new JNumberTextField(3,JNumberTextField.NUMERIC);
-	private JNumberTextField nb5 = new JNumberTextField(3,JNumberTextField.NUMERIC);
-	private JNumberTextField nb2 = new JNumberTextField(3,JNumberTextField.NUMERIC);
-	private JNumberTextField nb1 = new JNumberTextField(3,JNumberTextField.NUMERIC);
-	private JNumberTextField nb25c = new JNumberTextField(3,JNumberTextField.NUMERIC);
-	private JNumberTextField nb10c = new JNumberTextField(3,JNumberTextField.NUMERIC);
-	private JNumberTextField nb5c = new JNumberTextField(3,JNumberTextField.NUMERIC);
-	private JNumberTextField nb1c = new JNumberTextField(3,JNumberTextField.NUMERIC);
+	private JNumberTextField nb20 = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
+	private JNumberTextField nb10 = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
+	private JNumberTextField nb5 = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
+	private JNumberTextField nb2 = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
+	private JNumberTextField nb1 = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
+	private JNumberTextField nb25c = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
+	private JNumberTextField nb10c = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
+	private JNumberTextField nb5c = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
+	private JNumberTextField nb1c = new JNumberTextField(
+        3, JNumberTextField.NUMERIC
+    );
 	
 	private JButton jbtOK = new JButton("OK");
 	private JButton jbtCancel = new JButton("Cancel");
@@ -101,5 +114,4 @@ public class CountDialog extends JDialog {
 	public double getSum() {
 		return sum;
 	}
-
 }

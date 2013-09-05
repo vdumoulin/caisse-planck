@@ -17,7 +17,8 @@ public class ItemButton extends JButton implements Cloneable {
 	
 	private DecimalFormat df = new DecimalFormat("#0.00");
 	
-	public ItemButton(String barcode,String name, double price, String category, String shortcut) {
+	public ItemButton(String barcode,String name, double price,
+                      String category, String shortcut) {
 		super();
 		
 		setFont(new Font("Times New Roman", Font.PLAIN, 60));
@@ -35,7 +36,8 @@ public class ItemButton extends JButton implements Cloneable {
 	}
 	
 	public String toString() {
-		return category+"|"+name+" x "+quantity+" = "+df.format(price*quantity);
+		return category + "|" + name + " x " + quantity + " = " +
+            df.format(price*quantity);
 	}
 	
 	public String getBarcode() {
