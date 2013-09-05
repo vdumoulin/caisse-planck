@@ -40,6 +40,12 @@ import java.awt.event.ActionListener;
 
 import drawerControllib.DrawerControl;
 
+// CAISSE: Classe principale contenant la methode main. Elle herite de JFrame,
+//         ce qui signifie qu'elle represente la fenetre dans l'interface
+//         graphique.
+//
+//         Elle est chargee de l'affichage graphique en plus de contenir
+//         l'information relative a l'etat actuel de la caisse.
 public class Caisse extends JFrame {
     // Necessaire pour eviter un warning fatiguant
 	private static final long serialVersionUID = 1L;
@@ -57,7 +63,7 @@ public class Caisse extends JFrame {
 	public static final String EMPLOYES_PATH = "employes.txt";
 	public static final String TOTAL_CAISSE_PATH = "totalcaisse.dat";
 	
-    // WRITEME
+    // Categories de transactions (servent aux logs de transaction)
 	public static final int REGULAR_ITEM = 0;
 	public static final int MONTANT_ARBITRAIRE = 1;
 	public static final int AJUSTEMENT = 2;
@@ -70,6 +76,7 @@ public class Caisse extends JFrame {
 	// Accueille toute l'interface 
 	private JPanel wholeInterface;
     // L'interface qu'un benevole/gerant voit
+
 	private JPanel GUInterface;
         // Accueille le champ code barre et le panneau des boutons des items
         // scannes
@@ -168,10 +175,9 @@ public class Caisse extends JFrame {
 		fetchMenu();
         // A sa creation, un objet Employes recupere la liste des benevoles
 		employes = new Employes();							
-
 		
         // LE PROGRAMME TENTE DE RECUPERER LE MONTANT VIRTUEL TOTAL ENREGISTRE
-        // DANS UN FICHIER BINAIRE LORS DE SA DERNIER EXECUTION. S'IL EN EST
+        // DANS UN FICHIER BINAIRE LORS DE SA DERNIERE EXECUTION. S'IL EN EST
         // INCAPABLE, LE MONTANT EST MIS A 0.00$ ET EST ENREGISTRE DANS UN
         // NOUVEAU FICHIER BINAIRE.
 		try {
@@ -395,6 +401,7 @@ public class Caisse extends JFrame {
 		add(wholeInterface);
 	}
 	
+    // TODO: Verifier si c'est implemente correctement
 	class WindowClosing implements WindowListener {
 		public void windowOpened(WindowEvent e) {}
 		public void windowClosing(WindowEvent e) {
